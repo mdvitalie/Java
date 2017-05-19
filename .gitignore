@@ -1,0 +1,17 @@
+##########################################
+Files for git ignore. I.e they
+won't be travked or commited
+##########################################
+
+
+
+# Ingnor all eclipse setting files
+.classpath
+.metadata
+.project
+.recommenders
+.settings
+
+# ingnor all .class files and the bin folder
+*.class
+/bin/
