@@ -58,7 +58,7 @@ public class Ex1LargestSmallestSearchingSortingAnArray {
 	}
 
 	public void sortArray(int[] sortNum){
-	int counter = 1;
+	// int counter = 1;
 		System.out.println();
 		System.out.print("##### Sorted Array #####");
 		System.out.println();

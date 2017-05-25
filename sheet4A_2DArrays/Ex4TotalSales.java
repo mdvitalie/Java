@@ -100,7 +100,13 @@ public class Ex4TotalSales {
 			}*/
 			
 			//System.out.printf("%8d%8d",sum,totalSum);
+			
+			
+			
 		}
+			
+	
+			
 			
 		
 		System.out.printf("\n %s","_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");

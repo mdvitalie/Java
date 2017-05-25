@@ -28,12 +28,12 @@ public class Exe4EmailAccountMain {
 		System.out.println(email2);
 		System.out.println("______________________________________");
 		
-		/*
+	
 		System.out.println();
 		Exe4EmailAccount email3 = new Exe4EmailAccount("VotosGonzales@gmail.com","mD1234dg%",Exe4EmailAccount.GB_50,35);
 		System.out.println(email3);
 		System.out.println("______________________________________");
-		
+		/*
 		System.out.println();
 		Exe4EmailAccount email4 = new Exe4EmailAccount("dublinireland@gmail.com","mD1234dg%",100_000,5);
 		System.out.println(email4);
