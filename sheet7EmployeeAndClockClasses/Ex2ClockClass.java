@@ -51,26 +51,47 @@ public class Ex2ClockClass {
 		}
 	
 	// Set complete time
-	public void setCompleteTime(int hours, int minutes, int seconds){
+	/*public void setCompleteTime(int hours, int minutes, int seconds){
 		setHours(hours);
 		setMinutes(minutes);
 		setSeconds(seconds);
-	}
+	}*/
 	
 	
 	
 	//increment hours
 	public void incrementHours(int incHours){
-		hours += incHours;
+		
+			hours += incHours;
+			if(hours>=24)
+				hours= hours % 24;
+			
+			//incrementHours(1);
+		
 	}
 	
 	//increment minutes
 	public void incrementMinutes(int incMinutes){
-		minutes +=incMinutes;
+		
+		
+			minutes +=incMinutes;
+			if(minutes>59){
+				//minutes -=60;
+				minutes = minutes % 60;
+			incrementHours(1);
+		
+		}
+			
 	}
 	
 	public void incrementSeconds(int incSeconds){
-		seconds += incSeconds;
+		
+		
+			seconds += incSeconds;
+			if(seconds >59){
+				seconds = seconds % 60;
+			incrementMinutes(1);
+			}
 	}
 	
 	public void resetTime(){
@@ -87,7 +108,7 @@ public class Ex2ClockClass {
 					" minutes: " + minutes +
 					" seconds: " + seconds;
 			*/
-			return String.format("\n Time clock \n %02d:%02d:%02d:", hours, minutes, seconds);
+			return String.format("\n Time clock \n %02d:%02d:%02d", hours, minutes, seconds);
 		}
 
 
