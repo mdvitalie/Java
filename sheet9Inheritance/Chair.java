@@ -6,12 +6,17 @@ public class Chair extends Furniture {
 	private boolean hasGaslift;
 	private String type;
 	
+	//Static / class variables
+	public static int chairCounter=985;
+	
 	public Chair(){
-		
+		chairCounter++;
 	}
 	
 	public Chair(String colour, String materialType,boolean hasGaslift,String type){
 		this();
+		setColour(colour);
+		setMaterialType(materialType);
 		this.hasGaslift = hasGaslift;
 		this.type = type;
 		
@@ -50,8 +55,11 @@ public class Chair extends Furniture {
 	 */
 	@Override
 	public String toString() {
-		return "Chair has gas lift: " + hasGaslift + 
-				"\n type=" + type;
+		System.out.println("\n\tCHAIR");
+		System.out.println("---------------------");
+		return " Chair number: "+chairCounter + "\n\n"+super.toString()+
+				"\n Has gas lift: " + hasGaslift + 
+				"\n type: " + type;
 	}
 	
 	

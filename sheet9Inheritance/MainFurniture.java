@@ -3,8 +3,34 @@ package sheet9Inheritance;
 public class MainFurniture {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+//		Furniture furniture = new Furniture("Brown","Wood");
+//		System.out.println(furniture);
+		
+		Table table = new Table();
+		table.setColour("Red");
+		table.setMaterialType("Porcelan");
+		table.isExpandable();
+		table.setShape("Square");
+		
+		System.out.println(table);
+		
+		System.out.println("\n///////////////////////////////////\n");
+		
+		
+		Bed bed = new Bed("Blue","Plastic",true,"XXL");
+		System.out.println(bed);
+		Bed bed2 = new Bed("Orange","Metal",true,"Double");
+		System.out.println(bed2);
+		
+		System.out.println("\n///////////////////////////////////\n");
+		Chair chair = new Chair("Red", "Wood", false, "Dining Chair");
+		System.out.println(chair);
+		
+		Chair chair2 = new Chair();
+		chair2.setColour("Green");
+		System.out.println(chair2);
+		
 	}
 
 }

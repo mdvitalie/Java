@@ -5,11 +5,9 @@ public class Furniture {
 	private String colour;
 	private String materialType;
 	
-	//Static / class variables
 	
-	public static int furnitureCounter;
 	public Furniture() {
-		furnitureCounter++;
+		
 	}
 
 
@@ -57,7 +55,7 @@ public class Furniture {
 	 */
 	@Override
 	public String toString() {
-		return "Colour: " + colour + 
+		return " Colour: " + colour + 
 				"\n Material type: " + materialType;
 	}
 	

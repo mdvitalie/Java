@@ -6,14 +6,19 @@ public class Bed extends Furniture {
 	private boolean hasHeadboard;
 	private String size;
 	
+	//Static / class variables
+		public static int bedCounter=520;
+	
 	
 	 Bed() {
-		 
+		 bedCounter++;
 	}
 
 
 	public Bed(String colour, String materialType,boolean hasHeadboard, String size) {
 		this();
+		setColour(colour);
+		setMaterialType(materialType);
 		this.hasHeadboard = hasHeadboard;
 		this.size = size;
 	}
@@ -56,8 +61,10 @@ public class Bed extends Furniture {
 	 */
 	@Override
 	public String toString() {
-		return "\n Has Head board: " + hasHeadboard + 
-				"\n Size=" + size;
+		System.out.println("\n\tBED");
+		System.out.println("---------------------");
+		return "\n Bed number: " +bedCounter +"\n\n"+super.toString() + "\n Head board: " + hasHeadboard + 
+				"\n Size: " + size;
 	}
 	
 	
