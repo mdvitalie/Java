@@ -29,6 +29,9 @@ public class MainFurniture {
 		
 		Chair chair2 = new Chair();
 		chair2.setColour("Green");
+		chair2.setMaterialType("Plastic");
+		chair2.setHasGaslift(true);
+		chair2.setType("Ball chair");
 		System.out.println(chair2);
 		
 	}
