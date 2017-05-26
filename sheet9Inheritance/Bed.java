@@ -1,5 +1,5 @@
 package sheet9Inheritance;
 
-public class Bed {
+public class Bed extends Furniture {
 
 }
