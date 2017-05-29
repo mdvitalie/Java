@@ -15,10 +15,11 @@ public class Rectangle extends Shape {
 	}
 
 
-	public Rectangle(String colour,double heigth, double width) {
+	public Rectangle(Colour colour,double heigth, double width) {
 		super(colour);
-		this.heigth = heigth;
-		this.width = width;
+		setHeigth(heigth);
+		setWidth(width);
+		this.area = area;
 	}
 
 
@@ -34,6 +35,10 @@ public class Rectangle extends Shape {
 	 * @param heigth the heigth to set
 	 */
 	public void setHeigth(double heigth) {
+		
+		if(heigth<0){
+			System.out.println("No such heigth");
+		}
 		this.heigth = heigth;
 	}
 
@@ -50,6 +55,9 @@ public class Rectangle extends Shape {
 	 * @param width the width to set
 	 */
 	public void setWidth(double width) {
+		if(width<0){
+			System.out.println("No shuch width.");
+		}
 		this.width = width;
 	}
 
@@ -58,12 +66,14 @@ public class Rectangle extends Shape {
 	 * @return the area
 	 */
 	public double getArea() {
+		area= width * heigth;
 		return area;
 	}
 	
 	//Method draw()
 	public void draw(){
-		System.out.println("Drawing a Rectangle");
+		System.out.println("\n Drawing a Rectangle");
+		System.out.println("----------------------");
 	}
 
 
@@ -72,10 +82,10 @@ public class Rectangle extends Shape {
 	 */
 	@Override
 	public String toString() {
-		return "\nColour: "+ getColour() +
-				"Heigth: " + heigth + 
-				"\n Width=" + width + 
-				"\n Area=" + area;
+		return " Colour: "+ getColour() +
+				"\n Heigth: " + heigth + 
+				"\n Width: " + width + 
+				"\n Area: " + getArea();
 	}
 
 	

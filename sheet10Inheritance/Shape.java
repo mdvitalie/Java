@@ -3,7 +3,7 @@ package sheet10Inheritance;
 public class Shape {
 	
 	// member variale
-	private String colour;
+	private Colour colour;
 	
 	
 	//Enums
@@ -16,7 +16,7 @@ public class Shape {
 	}
 
 
-	public Shape(String colour) {
+	public Shape(Colour colour) {
 		this();
 		this.colour = colour;
 	}
@@ -25,7 +25,7 @@ public class Shape {
 	/**
 	 * @return the colour
 	 */
-	public String getColour() {
+	public Colour getColour() {
 		return colour;
 	}
 
@@ -33,7 +33,7 @@ public class Shape {
 	/**
 	 * @param colour the colour to set
 	 */
-	public void setColour(String colour) {
+	public void setColour(Colour colour) {
 		this.colour = colour;
 	}
 	
@@ -44,6 +44,6 @@ public class Shape {
 	}
 		
 	public String toString(){
-		return " Colour" + colour;
+		return " Colour: " + colour;
 	}
 }

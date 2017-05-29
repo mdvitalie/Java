@@ -7,7 +7,7 @@ public class Triangle extends Shape {
 		
 	}
 	
-	public Triangle(String colour){
+	public Triangle(Colour colour){
 		super(colour);
 	}
 	

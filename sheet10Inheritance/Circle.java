@@ -9,7 +9,7 @@ public class Circle extends Shape {
 		
 	}
 	
-	public Circle(String colour, int radius){
+	public Circle(Colour colour, int radius){
 		super(colour);
 		this.radius=radius;
 	}
