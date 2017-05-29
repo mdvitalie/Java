@@ -40,7 +40,7 @@ public class Shape {
 	
 	public void draw()
 	{
-		
+		System.out.println(" Drawing a Shape");
 	}
 		
 	public String toString(){
