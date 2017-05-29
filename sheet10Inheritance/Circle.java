@@ -33,8 +33,8 @@ public class Circle extends Shape {
 	}
 	
 	public String toString(){
-		return "Colour : " + getColour()+
-				"Radius : " + radius;
+		return "\n Colour : " + getColour()+
+				"\n Radius : " + radius;
 	}
 
 }

@@ -18,7 +18,16 @@ public class ShapeTesterMain {
 		
 		
 		//Shape array
+		Shape[] arr = {rectangle,triangle, new Circle(Shape.Colour.PINK, 555),
+						new Shape(Shape.Colour.YELLOW)
+		};
+		System.out.println("||||||||||||||||||||||||||||");
 		
+		for(Shape s: arr){
+			
+			System.out.println(s);
+			System.out.println("'''''''''''''''''''''''''''''\n");
+		}
 
 	}
 
