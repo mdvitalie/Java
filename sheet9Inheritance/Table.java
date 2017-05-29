@@ -3,8 +3,8 @@ package sheet9Inheritance;
 public class Table extends Furniture {
 
 	//member variable
-	private Expandable_Yes_No isExpandable;
-	private String shape;
+	private Expandable isExpandable;
+	private Shape shape;
 	
 	//Static / class variables
 	public static int tableCounter=333;
@@ -13,7 +13,7 @@ public class Table extends Furniture {
 		tableCounter++;
 	}
 
-	public Table(String colour, String materialType,Expandable_Yes_No isExpandable, String shape) {
+	public Table(Colour colour, MaterialType materialType,Expandable isExpandable, Shape shape) {
 		this();
 		setColour(colour);
 		setMaterialType(materialType);
@@ -24,28 +24,28 @@ public class Table extends Furniture {
 	/**
 	 * @return the isExpandable
 	 */
-	public Expandable_Yes_No isExpandable() {
+	public Expandable isExpandable() {
 		return isExpandable;
 	}
 
 	/**
 	 * @param isExpandable the isExpandable to set
 	 */
-	public void setExpandable(Expandable_Yes_No isExpandable) {
+	public void setExpandable(Expandable isExpandable) {
 		this.isExpandable = isExpandable;
 	}
 
 	/**
 	 * @return the shape
 	 */
-	public String getShape() {
+	public Shape getShape() {
 		return shape;
 	}
 
 	/**
 	 * @param shape the shape to set
 	 */
-	public void setShape(String shape) {
+	public void setShape(Shape shape) {
 		this.shape = shape;
 	}
 
@@ -57,8 +57,8 @@ public class Table extends Furniture {
 		System.out.println("\n\tTABLE");
 		System.out.println("---------------------");
 		return " Table number: " +tableCounter +"\n\n"+super.toString()+
-				"\n Expandable table: " + isExpandable +
-				"\n Shape: " + shape;
+				"\n Expandable table: " + isExpandable.toString().toString().toLowerCase() +
+				"\n Shape: " + shape.toString().toLowerCase();
 		
 	}
 	

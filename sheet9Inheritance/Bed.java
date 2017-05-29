@@ -3,8 +3,8 @@ package sheet9Inheritance;
 public class Bed extends Furniture {
 
 	//member variable
-	private Expandable_Yes_No hasHeadboard;
-	private String size;
+	private Expandable hasHeadboard;
+	private BedSize size;
 	
 	//Static / class variables
 		public static int bedCounter=520;
@@ -15,10 +15,12 @@ public class Bed extends Furniture {
 	}
 
 
-	public Bed(String colour, String materialType,Expandable_Yes_No hasHeadboard, String size) {
-		this();
-		setColour(colour);
-		setMaterialType(materialType);
+	public Bed(Colour colour, MaterialType materialType,Expandable hasHeadboard, BedSize size) {
+		//this();
+		//setColour(colour);
+		//setMaterialType(materialType);
+		super(colour,materialType);
+		bedCounter++;
 		this.hasHeadboard = hasHeadboard;
 		this.size = size;
 	}
@@ -27,7 +29,7 @@ public class Bed extends Furniture {
 	/**
 	 * @return the hasHeadboard
 	 */
-	public Expandable_Yes_No isHasHeadboard() {
+	public Expandable isHasHeadboard() {
 		return hasHeadboard;
 	}
 
@@ -35,7 +37,7 @@ public class Bed extends Furniture {
 	/**
 	 * @param hasHeadboard the hasHeadboard to set
 	 */
-	public void setHasHeadboard(Expandable_Yes_No hasHeadboard) {
+	public void setHasHeadboard(Expandable hasHeadboard) {
 		this.hasHeadboard = hasHeadboard;
 	}
 
@@ -43,7 +45,7 @@ public class Bed extends Furniture {
 	/**
 	 * @return the size
 	 */
-	public String getSize() {
+	public BedSize getSize() {
 		return size;
 	}
 
@@ -51,7 +53,7 @@ public class Bed extends Furniture {
 	/**
 	 * @param size the size to set
 	 */
-	public void setSize(String size) {
+	public void setSize(BedSize size) {
 		this.size = size;
 	}
 
@@ -63,8 +65,8 @@ public class Bed extends Furniture {
 	public String toString() {
 		System.out.println("\n\tBED");
 		System.out.println("---------------------");
-		return "\n Bed number: " +bedCounter +"\n\n"+super.toString() + "\n Headboard: " + hasHeadboard + 
-				"\n Size: " + size;
+		return "\n Bed number: " +bedCounter +"\n\n"+super.toString() + "\n Headboard: " + hasHeadboard.toString().toLowerCase() + 
+				"\n Size: " + size.toString().toLowerCase();
 	}
 	
 	

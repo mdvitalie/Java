@@ -1,17 +1,24 @@
 package sheet9Inheritance;
 
-public class Furniture {
+public abstract class Furniture {
 	//member variable 
-	private String colour;
-	private String materialType;
+	private Colour colour;
+	private MaterialType materialType;	
 	
+	protected enum Colour{RED,BLUE,GREEN,BLACK,GREY,WITHE,YELLOW,BROW}
+	
+	//STATIC COUNTER
+	public static int counter;
+	
+	
+
 	
 	public Furniture() {
-		
+		counter++;
 	}
 
 
-	public Furniture(String colour, String materialType) {
+	public Furniture(Colour colour, MaterialType materialType) {
 		this();
 		this.colour = colour;
 		this.materialType = materialType;
@@ -21,7 +28,7 @@ public class Furniture {
 	/**
 	 * @return the colour
 	 */
-	public String getColour() {
+	public Colour getColour() {
 		return colour;
 	}
 
@@ -29,7 +36,7 @@ public class Furniture {
 	/**
 	 * @param colour the colour to set
 	 */
-	public void setColour(String colour) {
+	public void setColour(Colour colour) {
 		this.colour = colour;
 	}
 
@@ -37,7 +44,7 @@ public class Furniture {
 	/**
 	 * @return the materialType
 	 */
-	public String getMaterialType() {
+	public MaterialType getMaterialType() {
 		return materialType;
 	}
 
@@ -45,7 +52,7 @@ public class Furniture {
 	/**
 	 * @param materialType the materialType to set
 	 */
-	public void setMaterialType(String materialType) {
+	public void setMaterialType(MaterialType materialType) {
 		this.materialType = materialType;
 	}
 
@@ -55,8 +62,8 @@ public class Furniture {
 	 */
 	@Override
 	public String toString() {
-		return " Colour: " + colour + 
-				"\n Material type: " + materialType;
+		return " Colour: " + colour.toString().toLowerCase() + 
+				"\n Material type: " + materialType.toString().toLowerCase();
 	}
 	
 	
