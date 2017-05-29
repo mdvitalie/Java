@@ -3,7 +3,7 @@ package sheet9Inheritance;
 public class Table extends Furniture {
 
 	//member variable
-	private boolean isExpandable;
+	private Expandable_Yes_No isExpandable;
 	private String shape;
 	
 	//Static / class variables
@@ -13,7 +13,7 @@ public class Table extends Furniture {
 		tableCounter++;
 	}
 
-	public Table(String colour, String materialType,boolean isExpandable, String shape) {
+	public Table(String colour, String materialType,Expandable_Yes_No isExpandable, String shape) {
 		this();
 		setColour(colour);
 		setMaterialType(materialType);
@@ -24,14 +24,14 @@ public class Table extends Furniture {
 	/**
 	 * @return the isExpandable
 	 */
-	public boolean isExpandable() {
+	public Expandable_Yes_No isExpandable() {
 		return isExpandable;
 	}
 
 	/**
 	 * @param isExpandable the isExpandable to set
 	 */
-	public void setExpandable(boolean isExpandable) {
+	public void setExpandable(Expandable_Yes_No isExpandable) {
 		this.isExpandable = isExpandable;
 	}
 

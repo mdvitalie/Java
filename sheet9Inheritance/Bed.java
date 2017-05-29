@@ -3,7 +3,7 @@ package sheet9Inheritance;
 public class Bed extends Furniture {
 
 	//member variable
-	private boolean hasHeadboard;
+	private Expandable_Yes_No hasHeadboard;
 	private String size;
 	
 	//Static / class variables
@@ -15,7 +15,7 @@ public class Bed extends Furniture {
 	}
 
 
-	public Bed(String colour, String materialType,boolean hasHeadboard, String size) {
+	public Bed(String colour, String materialType,Expandable_Yes_No hasHeadboard, String size) {
 		this();
 		setColour(colour);
 		setMaterialType(materialType);
@@ -27,7 +27,7 @@ public class Bed extends Furniture {
 	/**
 	 * @return the hasHeadboard
 	 */
-	public boolean isHasHeadboard() {
+	public Expandable_Yes_No isHasHeadboard() {
 		return hasHeadboard;
 	}
 
@@ -35,7 +35,7 @@ public class Bed extends Furniture {
 	/**
 	 * @param hasHeadboard the hasHeadboard to set
 	 */
-	public void setHasHeadboard(boolean hasHeadboard) {
+	public void setHasHeadboard(Expandable_Yes_No hasHeadboard) {
 		this.hasHeadboard = hasHeadboard;
 	}
 
@@ -63,7 +63,7 @@ public class Bed extends Furniture {
 	public String toString() {
 		System.out.println("\n\tBED");
 		System.out.println("---------------------");
-		return "\n Bed number: " +bedCounter +"\n\n"+super.toString() + "\n Head board: " + hasHeadboard + 
+		return "\n Bed number: " +bedCounter +"\n\n"+super.toString() + "\n Headboard: " + hasHeadboard + 
 				"\n Size: " + size;
 	}
 	

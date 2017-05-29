@@ -3,17 +3,20 @@ package sheet9Inheritance;
 public class Chair extends Furniture {
 
 	//member variable
-	private boolean hasGaslift;
+	private Expandable_Yes_No hasGaslift;
 	private String type;
 	
 	//Static / class variables
 	public static int chairCounter=985;
 	
+	public static final String YES = "YES";
+	public static final String NO = "NO";
+	
 	public Chair(){
 		chairCounter++;
 	}
 	
-	public Chair(String colour, String materialType,boolean hasGaslift,String type){
+	public Chair(String colour, String materialType,Expandable_Yes_No hasGaslift,String type){
 		this();
 		setColour(colour);
 		setMaterialType(materialType);
@@ -25,14 +28,14 @@ public class Chair extends Furniture {
 	/**
 	 * @return the hasGaslift
 	 */
-	public boolean isHasGaslift() {
+	public Expandable_Yes_No isHasGaslift() {
 		return hasGaslift;
 	}
 
 	/**
 	 * @param hasGaslift the hasGaslift to set
 	 */
-	public void setHasGaslift(boolean hasGaslift) {
+	public void setHasGaslift(Expandable_Yes_No hasGaslift) {
 		this.hasGaslift = hasGaslift;
 	}
 
