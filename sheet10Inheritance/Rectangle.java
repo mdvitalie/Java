@@ -19,7 +19,9 @@ public class Rectangle extends Shape {
 		super(colour);
 		setHeigth(heigth);
 		setWidth(width);
-		this.area = area;
+		//getArea();
+		//this.area = area;
+		draw();
 	}
 
 
@@ -36,7 +38,7 @@ public class Rectangle extends Shape {
 	 */
 	public void setHeigth(double heigth) {
 		
-		if(heigth<0){
+		if(heigth<=0){
 			System.out.println("No such heigth");
 		}
 		this.heigth = heigth;
@@ -73,7 +75,7 @@ public class Rectangle extends Shape {
 	//Method draw()
 	public void draw(){
 		System.out.println("\n Drawing a Rectangle");
-		System.out.println("----------------------");
+		//System.out.println("----------------------");
 	}
 
 
@@ -85,7 +87,8 @@ public class Rectangle extends Shape {
 		return " Colour: "+ getColour() +
 				"\n Heigth: " + heigth + 
 				"\n Width: " + width + 
-				"\n Area: " + getArea();
+				"\n Area: " + getArea()+
+				String.format("\n Rectangle counter : %03d ", rectangleCounter);
 	}
 
 	

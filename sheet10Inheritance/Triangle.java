@@ -9,10 +9,13 @@ public class Triangle extends Shape {
 	
 	public Triangle(Colour colour){
 		super(colour);
+		draw();
 	}
 	
 	public void draw(){
 		
-		System.out.println("Hat it is a triangle");
+		System.out.println(" ---- Drawing a triangle ----");
 	}
+	
+	
 }

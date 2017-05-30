@@ -4,6 +4,7 @@ public class Circle extends Shape {
 	
 	//member variable
 	private int radius;
+	public static int circleCounter=0;
 	
 	public Circle(){
 		
@@ -12,6 +13,7 @@ public class Circle extends Shape {
 	public Circle(Colour colour, int radius){
 		super(colour);
 		this.radius=radius;
+		circleCounter++;
 	}
 
 	/**
@@ -29,12 +31,13 @@ public class Circle extends Shape {
 	}
 	
 	public void draw(){
-		System.out.println("It is a circle");
+		System.out.println("\n ##### Drawing a circle #####");
 	}
 	
 	public String toString(){
 		return "\n Colour : " + getColour()+
-				"\n Radius : " + radius;
+				"\n Radius : " + radius + 
+				String.format("\n Circle counter : %03d ", circleCounter);
 	}
 
 }

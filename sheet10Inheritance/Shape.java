@@ -1,6 +1,6 @@
 package sheet10Inheritance;
 
-public class Shape {
+public  class Shape {
 	
 	// member variale
 	private Colour colour;
@@ -44,6 +44,6 @@ public class Shape {
 	}
 		
 	public String toString(){
-		return " Colour: " + colour;
+		return " Shape colour: " + colour;
 	}
 }
