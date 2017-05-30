@@ -1,10 +1,13 @@
 package sheet11InheritancePayrollSystem;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoField;
+
 public abstract class Employee {
 	
 	private String firstName;
 	private String lastName;
-	private int dob;
+	private LocalDate dob;
 	
 	public static int employeeCounter;
 	
@@ -15,20 +18,25 @@ public abstract class Employee {
 	
 	
 	public Employee() {
-		employeeCounter++;
 	}
 
 
 
 
-	public Employee(String firstName, String lastName, int dob) {
 	
+
+
+	public Employee(String firstName, String lastName, LocalDate dob) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dob = dob;
 	}
 
 
+
+
+	
 
 	/**
 	 * @return the firstName
@@ -39,13 +47,15 @@ public abstract class Employee {
 
 
 
+
 	/**
 	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	
+
+
 
 
 	/**
@@ -54,6 +64,7 @@ public abstract class Employee {
 	public String getLastName() {
 		return lastName;
 	}
+
 
 
 
@@ -66,34 +77,44 @@ public abstract class Employee {
 
 
 
+
 	/**
 	 * @return the dob
 	 */
-	public int getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
+
 
 
 
 	/**
 	 * @param dob the dob to set
 	 */
-	public void setDob(int dob) {
+	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
 
 
-	
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
+	
 	@Override
 	public String toString() {
-		return  "Employee counter: "+ employeeCounter+
+		return  String.format(" \n Employee counter: %04d", employeeCounter)+
+				" \n First name:" + firstName +
+				"\n Last name: " + lastName + 
+				"\n Date of birth: " +String.format("%d/%02d/%d", dob.get(ChronoField.DAY_OF_MONTH),
+						dob.get(ChronoField.MONTH_OF_YEAR),
+						dob.get(ChronoField.YEAR));
+	}
+	
+	/*@Override
+	public String toString() {
+		return  String.format(" \n Employee counter: %04d", employeeCounter)+
 				" \n First name:" + firstName +
 				"\n Last name: " + lastName + "\n dob: " + dob;
-	}
+	}*/
 	
 	
 	

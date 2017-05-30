@@ -1,17 +1,27 @@
 package sheet11InheritancePayrollSystem;
 
+import java.time.LocalDate;
+
 public class Boss extends Employee {
 
 	private double weeklySalary;
 	
+	public Boss(){
+		weeklySalary =3500;
+	}
 	
 	
 	
-	public Boss(String firstName, String lastName, int dob, double weeklySalary) {
+
+
+
+	public Boss(String firstName, String lastName, LocalDate dob, double weeklySalary) {
 		super(firstName, lastName, dob);
 		this.weeklySalary = weeklySalary;
 	}
 
+
+	
 
 
 
@@ -49,7 +59,7 @@ public class Boss extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return " Boos "+super.toString()+
+		return "\n Boos "+super.toString()+
 				"\n Weekly salary: " + weeklySalary;
 	}
 	
