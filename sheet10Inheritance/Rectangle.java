@@ -21,7 +21,7 @@ public class Rectangle extends Shape {
 		setWidth(width);
 		//getArea();
 		//this.area = area;
-		draw();
+		
 	}
 
 
@@ -38,9 +38,6 @@ public class Rectangle extends Shape {
 	 */
 	public void setHeigth(double heigth) {
 		
-		if(heigth<=0){
-			System.out.println("No such heigth");
-		}
 		this.heigth = heigth;
 	}
 
@@ -57,9 +54,7 @@ public class Rectangle extends Shape {
 	 * @param width the width to set
 	 */
 	public void setWidth(double width) {
-		if(width<0){
-			System.out.println("No shuch width.");
-		}
+		
 		this.width = width;
 	}
 
@@ -74,7 +69,7 @@ public class Rectangle extends Shape {
 	
 	//Method draw()
 	public void draw(){
-		System.out.println("\n Drawing a Rectangle");
+		System.out.printf(" Drawing a %.2f * %.2f %s Rectangle\n",heigth,width,getColour());
 		//System.out.println("----------------------");
 	}
 
@@ -84,13 +79,22 @@ public class Rectangle extends Shape {
 	 */
 	@Override
 	public String toString() {
+		return " Ractangle: " + super.toString()+
+				"\n Heigth: " + heigth + 
+				"\n Width: " + width + 
+				"\n Area: " + getArea()+ "cm2"+
+				String.format("\n Rectangle counter : %03d ", rectangleCounter);
+	}
+	
+/*	@Override
+	public String toString() {
 		return " Colour: "+ getColour() +
 				"\n Heigth: " + heigth + 
 				"\n Width: " + width + 
 				"\n Area: " + getArea()+
 				String.format("\n Rectangle counter : %03d ", rectangleCounter);
 	}
-
+*/
 	
 	
 }

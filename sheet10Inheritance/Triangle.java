@@ -9,13 +9,16 @@ public class Triangle extends Shape {
 	
 	public Triangle(Colour colour){
 		super(colour);
-		draw();
+		//draw();
 	}
 	
 	public void draw(){
 		
-		System.out.println(" ---- Drawing a triangle ----");
+		//System.out.println(" ---- Drawing a triangle ----\n");
+		System.out.printf("Drawing a %s Triangle\n",getColour());
 	}
 	
-	
+	/*public String toString(){
+		return super.toString();
+	}*/
 }

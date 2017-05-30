@@ -1,6 +1,6 @@
 package sheet10Inheritance;
 
-public  class Shape {
+public abstract  class Shape {
 	
 	// member variale
 	private Colour colour;
@@ -38,12 +38,10 @@ public  class Shape {
 	}
 	
 	
-	public void draw()
-	{
-		System.out.println(" Drawing a Shape");
-	}
+	 public abstract void draw();
+	
 		
 	public String toString(){
-		return " Shape colour: " + colour;
+		return "\n Shape colour: " + colour;
 	}
 }

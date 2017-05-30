@@ -4,7 +4,7 @@ public class Circle extends Shape {
 	
 	//member variable
 	private int radius;
-	public static int circleCounter=0;
+	public static int circleCounter=005;
 	
 	public Circle(){
 		
@@ -31,13 +31,20 @@ public class Circle extends Shape {
 	}
 	
 	public void draw(){
-		System.out.println("\n ##### Drawing a circle #####");
+		//System.out.println("\n ##### Drawing a circle #####");
+		System.out.printf(" Drawing  a %s\n",getColour());
 	}
 	
 	public String toString(){
+		return "\n Circle: " +super.toString()+
+				"\n radius: " +radius+
+				String.format("\n Circle counter : %03d ", circleCounter);
+	}
+	
+	/*public String toString(){
 		return "\n Colour : " + getColour()+
 				"\n Radius : " + radius + 
 				String.format("\n Circle counter : %03d ", circleCounter);
-	}
+	}*/
 
 }
