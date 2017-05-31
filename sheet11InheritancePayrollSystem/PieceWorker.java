@@ -68,9 +68,10 @@ public class PieceWorker extends Employee {
 
 
 	@Override
-	public void earning() {
+	public double getEarning() {
 		
-
+		wagePerPiece= wagePerPiece * quantity;
+		return wagePerPiece;
 	}
 
 
@@ -81,8 +82,9 @@ public class PieceWorker extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return "PieceWorker \n Wage Per Piece: " + wagePerPiece +
-				"\n Quantity=" + quantity+ super.toString();
+		return super.toString()+
+				"\n PieceWorker \n Wage Per Piece: " + wagePerPiece +
+				"\n Quantity: " + quantity ;
 	}
 	
 	

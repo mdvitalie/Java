@@ -68,8 +68,17 @@ public class HourlyWorker extends Employee {
 
 
 	@Override
-	public void earning() {
-		// TODO Auto-generated method stub
+	public double getEarning() {
+		
+		if(wage<=40){
+			this.wage = wage;
+			
+		}
+		
+				
+		hoursWorked = hoursWorked *1.5;
+		return hoursWorked;
+		
 
 	}
 
@@ -81,9 +90,10 @@ public class HourlyWorker extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return "HourlyWorker \n Wage: " + wage + 
-				"\n Hours worked: " + hoursWorked +
-				 super.toString();
+		return super.toString()+ 
+				"\n HourlyWorker \n Wage: " + wage + 
+				"\n Hours worked: " + hoursWorked 
+				 ;
 	}
 	
 	

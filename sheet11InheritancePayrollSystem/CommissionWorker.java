@@ -82,8 +82,8 @@ public class CommissionWorker extends Employee {
 
 
 	@Override
-	public void earning() {
-		
+	public double getEarning() {
+		return salary +(commission * quantity);
 
 	}
 
@@ -94,10 +94,10 @@ public class CommissionWorker extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return "CommissionWorker salary: " + salary +
+		return super.toString()+ "\n CommissionWorker salary: " + salary +
 				"\n Commission: " + commission +
-				"\n Quantity=" + quantity
-				+ super.toString();
+				"\n Quantity: " + quantity
+				;
 	}
 
 	

@@ -12,12 +12,14 @@ public abstract class Employee {
 	public static int employeeCounter;
 	
 	//Earning method
-	public abstract void earning();
+	public abstract double getEarning();
 	
 	
 	
 	
 	public Employee() {
+		
+		employeeCounter++;
 	}
 
 
@@ -27,10 +29,11 @@ public abstract class Employee {
 
 
 	public Employee(String firstName, String lastName, LocalDate dob) {
-		super();
+	
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dob = dob;
+		employeeCounter++;
 	}
 
 
