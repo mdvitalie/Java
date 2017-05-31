@@ -58,17 +58,21 @@ public class Pizza {
 		return pizzaSize;
 	}
 
-	public void calculatePrice(){
-
-	}
 
 	/**
 	 * @param pizzaSize the pizzaSize to set
 	 */
 	public void setPizzaSize(PizzaSize pizzaSize) {
+		
+		
 		this.pizzaSize = pizzaSize;
 	}
 
+	public void calculatePrice(){
+		
+	}
+	
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
