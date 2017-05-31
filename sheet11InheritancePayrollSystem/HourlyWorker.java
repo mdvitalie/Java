@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class HourlyWorker extends Employee {
 	
 	//member variables
-	private double wage;
+	private double wagePerHour;
 	private double hoursWorked;
 	
 	
@@ -18,30 +18,32 @@ public class HourlyWorker extends Employee {
 
 
 
-	public HourlyWorker(String firstName, String lastName, LocalDate dob, double wage, double hoursWorked) {
+	public HourlyWorker(String firstName, String lastName, LocalDate dob, double wagePerHour, double hoursWorked) {
 		super(firstName, lastName, dob);
-		this.wage = wage;
+		this.wagePerHour = wagePerHour;
 		this.hoursWorked = hoursWorked;
 	}
 
 
 
 
+
+
 	/**
-	 * @return the wage
+	 * @return the wagePerHour
 	 */
-	public double getWage() {
-		return wage;
+	public double getWagePerHour() {
+		return wagePerHour;
 	}
 
 
 
 
 	/**
-	 * @param wage the wage to set
+	 * @param wagePerHour the wagePerHour to set
 	 */
-	public void setWage(double wage) {
-		this.wage = wage;
+	public void setWagePerHour(double wagePerHour) {
+		this.wagePerHour = wagePerHour;
 	}
 
 
@@ -68,17 +70,15 @@ public class HourlyWorker extends Employee {
 
 
 	@Override
-	public double getEarning() {
-		
-		if(wage<=40){
-			this.wage = wage;
-			
+	public double getEarnings() {
+		/*if(hoursWorked > 40){
+			return (40 * hoursWorked)+((hoursWorked - 40) * wagePerHour * 1.5);
 		}
+		else{
+			return hoursWorked *wagePerHour;
+		}*/
 		
-				
-		hoursWorked = hoursWorked *1.5;
-		return hoursWorked;
-		
+		return hoursWorked > 40 ? (40 * hoursWorked)+((hoursWorked - 40) * wagePerHour * 1.5) : hoursWorked *wagePerHour;
 
 	}
 
@@ -90,10 +90,9 @@ public class HourlyWorker extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return super.toString()+ 
-				"\n HourlyWorker \n Wage: " + wage + 
-				"\n Hours worked: " + hoursWorked 
-				 ;
+		return "\n HourlyWorker"+super.toString()+ 
+				 String.format("\n Wage per hour : €,.2f", wagePerHour) + 
+				"\n Hours worked: " + hoursWorked ;
 	}
 	
 	

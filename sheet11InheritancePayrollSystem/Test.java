@@ -7,11 +7,45 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		
+		
+		
+		Boss b = new Boss("Tony", "Soprano", LocalDate.of(1958, Month.JUNE, 5), 135000);
+		CommissionWorker c = new CommissionWorker("Tony", "Montqana", LocalDate.of(1949, Month.APRIL, 9), 200, 50, 32);
+		PieceWorker p = new PieceWorker("Al", "capone", LocalDate.of(1922, Month.DECEMBER, 25), 125, 15);
+		HourlyWorker h = new HourlyWorker("Bugsy", "Malone", LocalDate.of(1902, Month.MAY, 25), 10, 50);
+		
+		
+		Employee[] workers = {b,c,p,h};
+		
+		for(Employee one: workers){
+			System.out.println(one.toString());
+			
+			
+			if(one instanceof Boss){
+				System.out.println("________________");
+				System.out.printf(" Boss salary : €%.2f ",((Boss)one).getWeeklySalary());
+				System.out.print("\n________________");
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		/*LocalDate now = LocalDate.now();
 		System.out.println(now);*/
 	
 		
-		Boss theBoss = new Boss("Vitas", "Oringoy",LocalDate.of(1975, Month.MARCH, 5), 2500);
+		/*Boss theBoss = new Boss("Vitas", "Oringoy",LocalDate.of(1975, Month.MARCH, 5), 2500);
 		System.out.println(theBoss);
 		Boss theBoss1 = new Boss("Vovaldy", "Martinez",LocalDate.of(1860,Month.APRIL, 30), 3500);
 		//System.out.println(theBoss1);
@@ -40,7 +74,7 @@ public class Test {
 		for(Employee one : employees){
 			//System.out.println(((Employee)one).getEarning());
 			System.out.println(one);
-		}
+		}*/
 
 	}
 

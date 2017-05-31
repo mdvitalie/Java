@@ -6,24 +6,11 @@ public class Boss extends Employee {
 
 	private double weeklySalary;
 	
-	
-	public Boss(){
-		weeklySalary =3500;
-	}
-	
-	
-	
-
-
 
 	public Boss(String firstName, String lastName, LocalDate dob, double weeklySalary) {
 		super(firstName, lastName, dob);
 		this.weeklySalary = weeklySalary;
 	}
-
-
-	
-
 
 
 	/**
@@ -48,8 +35,8 @@ public class Boss extends Employee {
 
 
 	@Override
-	public double getEarning() {
-		weeklySalary = weeklySalary/5;
+	public double getEarnings() {
+		
 		return weeklySalary;
 	}
 
@@ -61,8 +48,7 @@ public class Boss extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return "\n Boss "+super.toString()+
-				"\n Weekly salary: " + weeklySalary;
+		return "\n Boss "+super.toString();
 	}
 	
 	

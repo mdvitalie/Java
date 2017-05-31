@@ -68,10 +68,10 @@ public class PieceWorker extends Employee {
 
 
 	@Override
-	public double getEarning() {
+	public double getEarnings() {
 		
-		wagePerPiece= wagePerPiece * quantity;
-		return wagePerPiece;
+		return   wagePerPiece * quantity;
+		
 	}
 
 

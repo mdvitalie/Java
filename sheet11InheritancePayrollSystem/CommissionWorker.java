@@ -9,11 +9,7 @@ public class CommissionWorker extends Employee {
 	private double commission;
 	private int quantity;
 	
-	
 
-	public CommissionWorker() {
-		
-	}
 
 
 
@@ -82,7 +78,7 @@ public class CommissionWorker extends Employee {
 
 
 	@Override
-	public double getEarning() {
+	public double getEarnings() {
 		return salary +(commission * quantity);
 
 	}
@@ -94,11 +90,14 @@ public class CommissionWorker extends Employee {
 	 */
 	@Override
 	public String toString() {
-		return super.toString()+ "\n CommissionWorker salary: " + salary +
+		return "\n CommissionWorker: " + super.toString()+
+				"\n Salary : "+String.format("€%.2f", salary)+String.format("Commission: €.2f", commission)+
+				"\n Quantity : " +quantity;
+/*		return super.toString()+ "\n CommissionWorker salary: " + salary +
 				"\n Commission: " + commission +
 				"\n Quantity: " + quantity
 				;
-	}
+*/	}
 
 	
 
