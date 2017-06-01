@@ -1,27 +1,35 @@
 package sheet12CustomerWithPizzaArray;
 
-import java.util.Arrays;
+
 
 public class Pizza {
 
 	//member variables
 
 	private String[] toppings;
-	private double price;
 	private PizzaSize pizzaSize;
 
 	public static int pizzaCounter;
+
+
+	//constant
+	//	public static final int SMALL = 5;
+	//	public static final int MEDIUM = 7;
+	//	public static final int LARGE = 9;
+	//	public static final int EXTRA_LARGE = 12;
+
 
 	public Pizza() {
 		pizzaCounter++;
 	}
 
-	public Pizza(String[] toppings, double price, PizzaSize pizzaSize) {
-		this();
+
+	public Pizza(String[] toppings, PizzaSize pizzaSize) {
+		super();
 		this.toppings = toppings;
-		this.price = price;
 		this.pizzaSize = pizzaSize;
 	}
+
 
 	/**
 	 * @return the toppings
@@ -30,6 +38,7 @@ public class Pizza {
 		return toppings;
 	}
 
+
 	/**
 	 * @param toppings the toppings to set
 	 */
@@ -37,19 +46,6 @@ public class Pizza {
 		this.toppings = toppings;
 	}
 
-	/**
-	 * @return the price
-	 */
-	public double getPrice() {
-		return price;
-	}
-
-	/**
-	 * @param price the price to set
-	 */
-	public void setPrice(double price) {
-		this.price = price;
-	}
 
 	/**
 	 * @return the pizzaSize
@@ -63,25 +59,46 @@ public class Pizza {
 	 * @param pizzaSize the pizzaSize to set
 	 */
 	public void setPizzaSize(PizzaSize pizzaSize) {
-		
-		
 		this.pizzaSize = pizzaSize;
 	}
 
-	public void calculatePrice(){
-		
+
+	public double calculatePrice(){
+		return pizzaSize.getBasePrice()+ (pizzaSize.getPricePerTopping() * toppings.length);
 	}
-	
-	
+
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Pizza toppings: " + Arrays.toString(toppings) +
-				"\n Price: " + price +
-				"\n Pizza size: " + pizzaSize;
+
+		String text = " Pizza toppings: ";
+
+		/* Loop through the toppings array, when it's not the last element
+		 * put in a , and a space, if it is the last element, just add
+		 * it onto the text String.*/
+
+		for(int i=0;i<toppings.length; i++){
+			text+= toppings[i];
+
+			if(i !=toppings.length -1){
+				text+= ",";
+			}
+			
+		}
+		text += "\n pizzaSize: "+ pizzaSize.toString().toLowerCase().replace("_", " ");
+		text += String.format("\n Price: €%.2f", calculatePrice());
+
+		return text;
+		
+		
+		//	return " Pizza toppings: " + 
+		//	Arrays.toString(toppings) + 
+		//	"\n pizzaSize: " + pizzaSize;
 	}
+
 
 
 

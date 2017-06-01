@@ -6,8 +6,8 @@ public class Customer {
 	private String name;
 	private String address;
 	private String phone;
-	private String pizzas[];
-	private double totalCost;
+	private Pizza[] pizzas ;
+	//private double totalCost;
 	
 	
 
@@ -19,7 +19,7 @@ public class Customer {
 
 
 
-	public Customer(String name, String address, String phone, String[] pizzas) {
+	public Customer(String name, String address, String phone, Pizza[] pizzas) {
 		this();
 		this.name = name;
 		this.address = address;
@@ -87,7 +87,7 @@ public class Customer {
 	/**
 	 * @return the pizzas
 	 */
-	public String[] getPizzas() {
+	public Pizza[] getPizzas() {
 		return pizzas;
 	}
 
@@ -96,7 +96,7 @@ public class Customer {
 	/**
 	 * @param pizzas the pizzas to set
 	 */
-	public void setPizzas(String[] pizzas) {
+	public void setPizzas(Pizza[] pizzas) {
 		this.pizzas = pizzas;
 	}
 
@@ -106,9 +106,14 @@ public class Customer {
 	 * @return the totalCost
 	 */
 	public double getTotalCost() {
-		return totalCost;
+		double cost= 0;
+		
+		for(Pizza one: pizzas){
+			cost += one.calculatePrice();
+		}
+		
+		return cost;
 	}
-
 
 
 	/* (non-Javadoc)
@@ -116,11 +121,27 @@ public class Customer {
 	 */
 	@Override
 	public String toString() {
-		return "Customer name: " + name +
+		
+		String text = " Name: " + name;
+		text += "\n Address: " + address;
+		text += "\n Phone: " + phone;
+		
+		for(int i=0; i<pizzas.length; i++){
+			
+			text += "\n\n"+(i+1) +":"+ pizzas[i];
+			if(i != pizzas.length){
+				text +=", ";
+			}
+		}
+		
+		text += String.format("\n Total cost: €%.2f", getTotalCost());
+		return text;
+		
+		/*return "Customer name: " + name +
 				"\n Address: " + address + 
 				"\n Phone: " + phone +
 				"\n Pizzas: " + pizzas
-				+ "\n Total Cost: " + totalCost ;
+				+ "\n Total Cost: " + getTotalCost() ;*/
 	}
 	
 

@@ -1,10 +1,10 @@
 package sheet12CustomerWithPizzaArray;
 
 public enum PizzaSize {
-	SMALL(7,1.10),
+	SMALL(7,1.0),
 	MEDIUM(9,1.2),
-	LARGE(12,1.3),
-	EXTRA_LARGE(15,1.5);
+	LARGE(12,1.5),
+	EXTRA_LARGE(15,2);
 
 
 	private int basePrice;
@@ -22,28 +22,17 @@ public enum PizzaSize {
 		return basePrice;
 	}
 
-	/**
-	 * @param basePrice the basePrice to set
-	 */
-	public void setBasePrice(int basePrice) {
+	
+	/*public void setBasePrice(int basePrice) {
 		this.basePrice = basePrice;
-	}
+	}*/
 
-	/**
-	 * @return the pricePerTopping
-	 */
+
 	public double getPricePerTopping() {
 		return pricePerTopping;
 	}
 
-	/**
-	 * @param pricePerTopping the pricePerTopping to set
-	 */
-	public void setPricePerTopping(double pricePerTopping) {
-		this.pricePerTopping = pricePerTopping;
-	}
-
-
+	
 
 
 
