@@ -13,7 +13,7 @@ public class MainForPizza {
 		System.out.println(p1.getPricePerTopping());
 		*/
 		
-		String[] toppings = {"Cheese","tomato"};
+		/*String[] toppings = {"Cheese","tomato"};
 		Pizza p1 = new Pizza(toppings, ps1);
 
 		Pizza p2 = new Pizza(new String[]{"cheese","tomato","ham","mushrooms"},PizzaSize.EXTRA_LARGE);
@@ -30,7 +30,25 @@ public class MainForPizza {
 		
 		Customer c1 = new Customer("Jony Delvido", "20 Aldemo Street Dublin", "089546789",
 				new Pizza[]{p1,p2, new Pizza(new String[]{"extra cheese","black olievs","pepperoni"},PizzaSize.MEDIUM)});
-		System.out.println(c1);
+		System.out.println(c1);*/
+		
+		Customer c2 = new Customer("Dimon Alberto", "56 Roma avenue Italy", "02-456-789", new Pizza [] {  new Pizza(new String[]{"extra cheese","Green olievs", "Chiken"},PizzaSize.SMALL) , 
+				 new Pizza(new String[]{"extra cheese","Black olievs", "Pepperoni"},PizzaSize.EXTRA_LARGE)} );
+		
+		Customer c3 = new Customer("Grado Marino", "5 Roma Italy", "02-456-789", new Pizza [] {  new Pizza(new String[]{"cheese","Onions","Green olievs", "Chiken"},PizzaSize.SMALL) , 
+				 new Pizza(new String[]{"extra cheese","Green olievs", "Pepperoni","Chiken"},PizzaSize.SMALL)} );
+		
+		Customer c4 = new Customer("Grado Marino", "5 Roma Italy", "02-456-789", new Pizza [] {  new Pizza(new String[]{"cheese","Onions","Green olievs", "Chiken"},PizzaSize.SMALL) , 
+				new Pizza(new String[]{"extra cheese","Green olievs", "Pepperoni","Chiken"},PizzaSize.SMALL)} );
+		
+		Customer[] customers = {c2,c3,c4};
+		
+		for(Customer one: customers){
+			System.out.println("\n"+one);
+			System.out.println("____________________________");
+		}
+		
 	}
+	
 
 }
