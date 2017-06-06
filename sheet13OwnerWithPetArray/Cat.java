@@ -3,21 +3,25 @@ package sheet13OwnerWithPetArray;
 public class Cat extends Pet implements Mammal {
 
 	//member variable
-	private int numOfLives;
+	private int numOfLives =9;
 	private String microChipNumber;
-	private boolean isMicroChipped;
+	private MicroChipeed isMicroChipped;
+	
+	
+
+	//public Cat(){}
+	
 
 
-
-	/*	public Cat(String name, String breed, int age, String colour, boolean isFemale) {
+	/*	public Cat(String name, String breed, int age, Colour colour, Gender isFemale) {
 		super(name, breed, age, colour, isFemale);
 	}
+*/
+	
 
-	 */
 
-
-	public Cat(String name, String breed, int age, String colour, boolean isFemale, int numOfLives, String microChipNumber,
-			boolean isMicroChipped) {
+	public Cat(String name, String breed, int age, Colour colour, Gender isFemale, int numOfLives, String microChipNumber,
+			MicroChipeed isMicroChipped) {
 		super(name, breed, age, colour, isFemale);
 		this.numOfLives = numOfLives;
 		this.microChipNumber = microChipNumber;
@@ -26,9 +30,6 @@ public class Cat extends Pet implements Mammal {
 
 
 
-	public int getNumOfLives() {
-		return numOfLives;
-	}
 
 
 
@@ -44,16 +45,19 @@ public class Cat extends Pet implements Mammal {
 
 
 
-	public boolean isMicroChipped() {
+	public MicroChipeed isMicroChipped() {
 		return isMicroChipped;
 	}
 
 
 
-	public void setMicroChipped(boolean isMicroChipped) {
+	public void setMicroChipped(MicroChipeed isMicroChipped) {
 		this.isMicroChipped = isMicroChipped;
 	}
 
+	public int getNumOfLives() {
+		return numOfLives;
+	}
 
 
 	public void setNumOfLives(int numOfLives) {
@@ -64,7 +68,7 @@ public class Cat extends Pet implements Mammal {
 
 	@Override
 	public void walk() {
-		// TODO Auto-generated method stub
+		System.out.println(getName()+" is going for a walk.");
 
 	}
 
@@ -72,14 +76,14 @@ public class Cat extends Pet implements Mammal {
 
 	@Override
 	public void sleep() {
-		System.out.println("The Cat speeps");
+		System.out.println(getName()+" is  speeping.");
 
 	}
 
 
 	@Override
 	public String getTypeOfAnimal() {
-		return "Cat";
+		return " Cat";
 
 	}
 
@@ -87,7 +91,7 @@ public class Cat extends Pet implements Mammal {
 
 
 	public void justLostAlife(){
-
+		numOfLives--;
 	}
 
 
@@ -101,7 +105,9 @@ public class Cat extends Pet implements Mammal {
 	 */
 	@Override
 	public String toString() {
-		return "Cat num of Lives: " + numOfLives + ", toString(): " + super.toString();
+		return super.toString()+
+				"\nNum of Lives: " + numOfLives +
+				"\nMicro ChipNumber: "+ microChipNumber;
 	}
 
 

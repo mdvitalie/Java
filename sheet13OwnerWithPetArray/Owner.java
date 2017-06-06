@@ -8,71 +8,81 @@ public class Owner {
 	private String name;
 	private String address;
 	private String phone;
-	private String[] pets;
-	public Owner(String name, String address, String phone, String[] pets) {
-		super();
+	private Pet[] pets;
+	
+	
+
+	
+	public Owner(String name, String address, String phone, Pet[] pets) {
+	
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
-		this.pets = pets;
+		setPets(pets);
 	}
-	/**
-	 * @return the name
-	 */
+	
+	
 	public String getName() {
 		return name;
 	}
-	/**
-	 * @param name the name to set
-	 */
+	
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-	/**
-	 * @return the address
-	 */
+	
+	
 	public String getAddress() {
 		return address;
 	}
-	/**
-	 * @param address the address to set
-	 */
+	
+	
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	/**
-	 * @return the phone
-	 */
+	
+	
 	public String getPhone() {
 		return phone;
 	}
-	/**
-	 * @param phone the phone to set
-	 */
+	
+	
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	/**
-	 * @return the pets
-	 */
-	public String[] getPets() {
+	
+	
+	public Pet[] getPets() {
 		return pets;
 	}
-	/**
-	 * @param pets the pets to set
-	 */
-	public void setPets(String[] pets) {
+	
+	
+	public void setPets(Pet[] pets) {
 		this.pets = pets;
 	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+	
+	
 	@Override
 	public String toString() {
-		return "Owner name=" + name + 
-				", address=" + address + 
-				", phone=" + phone +
-				", pets=" + Arrays.toString(pets);
+		
+		String s ="\nName: "+getName()+
+		"\nAddress: "+getAddress() +
+		"\nPhone number: "+getPhone();
+		
+		s+="\nThe owners pets: \n";
+		
+		/* Loops through the array of pets (the member variable) and
+		 * calls the toString() on each, appending to the 's' String. */
+		
+		for(Pet p : pets){
+			s+=p.toString() + "\n";
+			
+		}
+		return s;
+		/*return "\n Owner name: " + name + 
+				"\n Address: " + address + 
+				"\n Phone: " + phone +
+				"\n pets: " + Arrays.toString(pets);*/
 	} 
 	
 	

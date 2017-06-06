@@ -4,63 +4,64 @@ public class Dog extends Pet implements Mammal {
 	
 	
 	//member variable
-	private String microChipNumber;
-	private boolean isMicroChipped;
+	private String microChipNumber= "Not set yet";
+	private MicroChipeed isMicroChipped;
 	
+	
+/*	public enum MicroChipeed{
+			IS_MICRO_CHIPEDD,
+			IS_NOT_MICRO_CHIPEED
+		
+	}
+	*/
 	
 	
 
 
 
-	public Dog(String name, String breed, int age, String colour, boolean isFemale) {
+	public Dog(String name, String breed, int age, Colour colour, Gender isFemale) {
 		super(name, breed, age, colour, isFemale);
 		
 	}
 	
 	
 
-	public Dog(String name, String breed, int age, String colour, boolean isFemale, String microChipNumber,
-			boolean isMicroChipped) {
+	public Dog(String name, String breed, int age, Colour colour, Gender isFemale, String microChipNumber,
+			MicroChipeed isMicroChipped) {
 		super(name, breed, age, colour, isFemale);
-		this.microChipNumber = microChipNumber;
-		this.isMicroChipped = isMicroChipped;
+		setMicroChipNumber(microChipNumber);
+		//this.microChipNumber = microChipNumber;
+		//this.isMicroChipped = isMicroChipped;
 	}
 
 	
 	
 
 
-	/**
-	 * @return the microChipNumber
-	 */
+	
 	public String getMicroChipNumber() {
 		return microChipNumber;
 	}
 
 
 
-	/**
-	 * @param microChipNumber the microChipNumber to set
-	 */
+	
 	public void setMicroChipNumber(String microChipNumber) {
+		//this.microChipNumber =true;
 		this.microChipNumber = microChipNumber;
 	}
 
 
 
-	/**
-	 * @return the isMicroChipped
-	 */
-	public boolean isMicroChipped() {
+	
+	public MicroChipeed isMicroChipped() {
 		return isMicroChipped;
 	}
 
 
 
-	/**
-	 * @param isMicroChipped the isMicroChipped to set
-	 */
-	public void setMicroChipped(boolean isMicroChipped) {
+	
+	public void setMicroChipped(MicroChipeed isMicroChipped) {
 		this.isMicroChipped = isMicroChipped;
 	}
 
@@ -68,32 +69,31 @@ public class Dog extends Pet implements Mammal {
 
 	@Override
 	public void walk() {
-		// TODO Auto-generated method stub
+		System.out.println(getName()+"is going for a walk");
 
 	}
 
 	@Override
 	public void sleep() {
-		// TODO Auto-generated method stub
+		System.out.println(getName()+"is sleeping");
 
 	}
 
 	@Override
 	public String getTypeOfAnimal() {
 		
-		return "Animal type : Dog";
+		return " Dog";
 	}
 
 
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
+	
+	/*@Override
 	public String toString() {
-		return super.toString() +"Dog microChipNumber: " + microChipNumber + 
-				", isMicroChipped: " + isMicroChipped;
-	}
+		return super.toString() +
+				"\n Dog microChipNumber: " + microChipNumber + 
+				"\n Micro Chipped: " + isMicroChipped.toString().replace("_", " ").toLowerCase();
+	}*/
 	
 	
 

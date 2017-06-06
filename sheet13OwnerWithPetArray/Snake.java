@@ -2,7 +2,7 @@ package sheet13OwnerWithPetArray;
 
 public class Snake extends Pet {
 
-	public Snake(String name, String breed, int age, String colour, boolean isFemale) {
+	public Snake(String name, String breed, int age, Colour colour, Gender isFemale) {
 		super(name, breed, age, colour, isFemale);
 	}
 
@@ -10,10 +10,10 @@ public class Snake extends Pet {
 		return " Snake";
 	}
 	
-@Override
+/*@Override
 	public String toString() 
 	{
 		return super.toString() + getTypeOfAnimal();
-	}
+	}*/
 	
 }

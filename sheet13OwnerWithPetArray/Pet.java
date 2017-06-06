@@ -5,101 +5,80 @@ public abstract class Pet {
 	private String name;
 	private String breed;
 	private int age;
-	private String Colour;
-	private boolean isFemale;
+	private Colour colour;
+	private Gender isFemale;
 	
-	//ENUMS
-	public enum Gender{FEMALE,
-						MALE
-						};
+	//static variables
+	public static final boolean MALE = false;
+	public static final boolean FEMALE = true;
 	
 	
-	public Pet(String name, String breed, int age, String colour, boolean isFemale) {
+	public Pet(String name, String breed, int age, Colour colour, Gender isFemale) {
 		
 		this.name = name;
 		this.breed = breed;
 		this.age = age;
-		Colour = colour;
+		this.colour = colour;
 		this.isFemale = isFemale;
 	}
 
 
-	/**
-	 * @return the name
-	 */
+	
 	public String getName() {
 		return name;
 	}
 
 
-	/**
-	 * @param name the name to set
-	 */
+	
 	public void setName(String name) {
 		this.name = name;
 	}
 
 
-	/**
-	 * @return the breed
-	 */
+	
 	public String getBreed() {
 		return breed;
 	}
 
 
-	/**
-	 * @param breed the breed to set
-	 */
+	
 	public void setBreed(String breed) {
 		this.breed = breed;
 	}
 
 
-	/**
-	 * @return the age
-	 */
+	
 	public int getAge() {
 		return age;
 	}
 
 
-	/**
-	 * @param age the age to set
-	 */
+	
 	public void setAge(int age) {
 		this.age = age;
 	}
 
 
-	/**
-	 * @return the colour
-	 */
-	public String getColour() {
-		return Colour;
+	
+	public Colour getColour() {
+		return colour;
 	}
 
 
-	/**
-	 * @param colour the colour to set
-	 */
-	public void setColour(String colour) {
-		Colour = colour;
+	
+	public void setColour(Colour colour) {
+		this.colour = colour;
 	}
 
 
-	/**
-	 * @return the isFemale
-	 */
-	public boolean isFemale() {
+	
+	public Gender isFemale() {
 		return isFemale;
 	}
 
 
-	/**
-	 * @param isFemale the isFemale to set
-	 */
-	public void setFemale(boolean isFemale) {
+	
+	public void setFemale(Gender isFemale) {
 		this.isFemale = isFemale;
 	}
 
@@ -107,13 +86,26 @@ public abstract class Pet {
 	//abstract method
 	public abstract String getTypeOfAnimal();
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
 	@Override
 	public String toString() {
-		return "Pet name: " + name + ", breed: " + breed + ", age: " + age + ", Colour: " + Colour + ", isFemale: "
-				+ isFemale;
+		
+		//String text = "\n"+ getName()+ " is a " + ((isFemale()) ? "female " : "male ")+ getTypeOfAnimal();
+		String text = "\n"+ getName().toUpperCase()+ " is a " + getTypeOfAnimal();
+		text += "\nBreed is " + breed;
+		text += "\nAge is " + age;
+		text += "\nColour is " + colour.toString().toLowerCase();
+		return text;
+		
+		/*return "\n\n Animal type: " + getTypeOfAnimal()+ 
+				"\n Pet name: " + name + 
+				"\n Breed: " + breed + 
+				"\n Age: " + age + 
+				"\n Colour: " + colour +
+				"\n Gender: "+ isFemale.toString().toLowerCase()
+				;*/
+		
+		
 	}
 	
 	
