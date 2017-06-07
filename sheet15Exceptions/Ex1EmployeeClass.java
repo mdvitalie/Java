@@ -57,9 +57,9 @@ public class Ex1EmployeeClass {
 		return age;
 	}
 	
-	public void setAge(int age) {
+	public void setAge(int age) throws InvalidAgeException {
 		
-		if(age<=18 || age>=65)
+		if(age<=18 && age>=65)
 			System.out.println("You take a break,");
 		else
 		this.age = age;

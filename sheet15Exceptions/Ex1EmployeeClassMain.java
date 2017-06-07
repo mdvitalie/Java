@@ -4,7 +4,10 @@ public class Ex1EmployeeClassMain {
 
 	public static void main(String[] args) {
 		
+		Ex1EmployeeClass e1 = new Ex1EmployeeClass(70);
+		System.out.println(e1);
 		
+		/*
 		Ex1EmployeeClass employee = new Ex1EmployeeClass("Adam", 25,25_000,2);
 		System.out.println(employee);
 		employee.increaseSalary(1.04);
@@ -50,7 +53,7 @@ public class Ex1EmployeeClassMain {
 		
 		System.out.println("\n---------------------------------");
 		System.out.println(" Number of Employee created: | " +Ex1EmployeeClass.employeeCounter);
-		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");*/
 	
 		
 
