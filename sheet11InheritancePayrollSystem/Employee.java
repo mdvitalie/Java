@@ -1,6 +1,8 @@
 package sheet11InheritancePayrollSystem;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 
 public abstract class Employee {
@@ -94,6 +96,8 @@ public abstract class Employee {
 	
 	@Override
 	public String toString() {
+		
+		
 		return  String.format(" \n Employee counter: %04d", employeeCounter)+
 				" \n First name:" + firstName +
 				"\n Last name: " + lastName + 

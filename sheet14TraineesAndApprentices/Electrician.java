@@ -1,5 +1,7 @@
 package sheet14TraineesAndApprentices;
 
+import java.time.LocalDate;
+
 public class Electrician extends Trainee implements Apprentice {
 	
 	// member variables
@@ -12,7 +14,7 @@ public class Electrician extends Trainee implements Apprentice {
 
 
 
-	public Electrician(String name, String dateOfBirth, String rsiNumber, String employersName, int phase) {
+	public Electrician(String name, LocalDate dateOfBirth, String rsiNumber, String employersName, int phase) {
 		super(name, dateOfBirth, rsiNumber);
 		this.employersName = employersName;
 		this.phase = phase;
@@ -53,8 +55,9 @@ public class Electrician extends Trainee implements Apprentice {
 	 */
 	@Override
 	public String toString() {
-		return "\nElectrican\nemployers Name: " + employersName + 
-				"\nPhase: " + phase +"\n"+ super.toString();
+		return "\nElectrician\nPhase: " + phase +
+				"\nemployers Name: " + employersName + 
+				"\n"+ super.toString();
 	}
 	
 	

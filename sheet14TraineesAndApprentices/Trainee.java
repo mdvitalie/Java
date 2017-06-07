@@ -1,10 +1,13 @@
 package sheet14TraineesAndApprentices;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoField;
+
 public class Trainee {
 	
 	//member variable
 	private String name;
-	private String dateOfBirth;
+	private LocalDate dateOfBirth;
 	private String rsiNumber;
 	
 	
@@ -13,7 +16,7 @@ public class Trainee {
 	}
 
 
-	public Trainee(String name, String dateOfBirth, String rsiNumber) {
+	public Trainee(String name, LocalDate dateOfBirth, String rsiNumber) {
 		super();
 		this.name = name;
 		this.dateOfBirth = dateOfBirth;
@@ -40,7 +43,7 @@ public class Trainee {
 	/**
 	 * @return the dateOfBirth
 	 */
-	public String getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
 
@@ -48,7 +51,7 @@ public class Trainee {
 	/**
 	 * @param dateOfBirth the dateOfBirth to set
 	 */
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -75,9 +78,15 @@ public class Trainee {
 	@Override
 	public String toString() {
 		return "Trainee name: " + name + 
+				//"\nDate of Birth: " + dateOfBirth.format(formatter) + 
+				"\nDate of Birth: " + String.format("%d/%02d/%d",dateOfBirth.get(ChronoField.DAY_OF_MONTH),
+						dateOfBirth.get(ChronoField.MONTH_OF_YEAR), dateOfBirth.get(ChronoField.YEAR)) + 
+				"\nPPS number: " + rsiNumber;
+		
+/*		return "Trainee name: " + name + 
 				"\nDate of Birth: " + dateOfBirth + 
 				"\nPPS number: " + rsiNumber;
-	}
+*/	}
 	
 	
 
