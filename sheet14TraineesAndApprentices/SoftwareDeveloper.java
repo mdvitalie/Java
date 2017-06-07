@@ -10,13 +10,11 @@ public class SoftwareDeveloper extends Trainee {
 		super(name,dateOfBirth,rsiNumber);
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+	/*
 	@Override
 	public String toString() {
 		return "\nSoftware Developer\n" + super.toString();
 	}
-	
+	*/
 	
 }

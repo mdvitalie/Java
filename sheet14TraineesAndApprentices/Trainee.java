@@ -1,6 +1,8 @@
 package sheet14TraineesAndApprentices;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 
 public class Trainee {
@@ -77,16 +79,20 @@ public class Trainee {
 	 */
 	@Override
 	public String toString() {
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM); 
 		return "Trainee name: " + name + 
+				//"\nDate of Birth: " + dateOfBirth.format(formatter) + 
+				"\nDate of Birth: " + dateOfBirth.format(formatter)+
+				"\nPPS number: " + rsiNumber;
+		
+/*		return "Trainee name: " + name + 
 				//"\nDate of Birth: " + dateOfBirth.format(formatter) + 
 				"\nDate of Birth: " + String.format("%d/%02d/%d",dateOfBirth.get(ChronoField.DAY_OF_MONTH),
 						dateOfBirth.get(ChronoField.MONTH_OF_YEAR), dateOfBirth.get(ChronoField.YEAR)) + 
 				"\nPPS number: " + rsiNumber;
-		
-/*		return "Trainee name: " + name + 
-				"\nDate of Birth: " + dateOfBirth + 
-				"\nPPS number: " + rsiNumber;
-*/	}
+*/		
+	}
 	
 	
 

@@ -35,7 +35,14 @@ public class Carpenter extends Trainee implements Apprentice {
 	 * @param phase the phase to set
 	 */
 	public void setPhase(int phase) {
-		this.phase = phase;
+		
+		if(phase>=PHASE_ONE && phase<=PHASE_SIX){
+			
+			this.phase = phase;
+		}else{
+			System.out.println(phase + " is not valid to phase, setting to phase 1");
+			this.phase = PHASE_ONE;
+		}
 	}
 
 
