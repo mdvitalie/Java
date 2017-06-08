@@ -28,11 +28,7 @@ public class Ex1EmployeeClass {
 		//setName(name);
 		this.name = name;
 	}
-	/*public Ex1EmployeeClass(int age) {
-		setAge(age);
-	}
-	*/
-	
+
 	
 	
 	
@@ -68,10 +64,17 @@ public class Ex1EmployeeClass {
 	public void setAge(int age) throws InvalidAgeException {
 		
 		if(age<=18 || age>=65)
-		throw new InvalidAgeException(age+"- age Take a break");
+		throw new InvalidAgeException(age+"- age should be from 18 tp 65");
 			//System.out.println("You take a break,");
 		else
 			this.age = age;
+		
+				//or
+		/*if(age>=18 && age<=65)
+			this.age = age;
+			//System.out.println("You take a break,");
+		else
+			throw new InvalidAgeException(age+"- age should be from 18 tp 65");*/
 	}
 	
 	public double getSalary() {

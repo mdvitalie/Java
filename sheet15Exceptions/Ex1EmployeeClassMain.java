@@ -6,12 +6,12 @@ public class Ex1EmployeeClassMain {
 
 	public static void main(String[] args) {
 		try{
-		Ex1EmployeeClass e1 = new Ex1EmployeeClass("Damboos", 25, 25500, 4);
+		Ex1EmployeeClass e1 = new Ex1EmployeeClass("Damboos", 50, 25500, 4);
 		System.out.println(e1);
 		System.out.println();
 		
 		}catch(InvalidAgeException e){
-			JOptionPane.showMessageDialog(null, "Age are to low or to hight");
+			JOptionPane.showMessageDialog(null, "invalid");
 			e.printStackTrace();
 		}
 	
@@ -40,7 +40,7 @@ public class Ex1EmployeeClassMain {
 		System.out.println("\n_______________________________\n");
 		
 		Ex1EmployeeClass employee2 = new Ex1EmployeeClass("Ted Morphy");
-		employee2.setAge(56);
+		employee2.setAge(61);
 		employee2.setSalary(65_000);
 		employee2.setSickDays(2);
 		System.out.println(employee2);
