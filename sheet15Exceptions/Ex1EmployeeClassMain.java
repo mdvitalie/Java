@@ -1,14 +1,22 @@
 package sheet15Exceptions;
 
+import javax.swing.JOptionPane;
+
 public class Ex1EmployeeClassMain {
 
 	public static void main(String[] args) {
-		
-		Ex1EmployeeClass e1 = new Ex1EmployeeClass(70);
+		try{
+		Ex1EmployeeClass e1 = new Ex1EmployeeClass("Damboos", 25, 25500, 4);
 		System.out.println(e1);
+		System.out.println();
 		
-		/*
-		Ex1EmployeeClass employee = new Ex1EmployeeClass("Adam", 25,25_000,2);
+		}catch(InvalidAgeException e){
+			JOptionPane.showMessageDialog(null, "Age are to low or to hight");
+			e.printStackTrace();
+		}
+	
+		try{
+		Ex1EmployeeClass employee = new Ex1EmployeeClass("Adam", 45,25_000,2);
 		System.out.println(employee);
 		employee.increaseSalary(1.04);
 		System.out.println(" New salary: " +employee.getSalary());
@@ -20,12 +28,12 @@ public class Ex1EmployeeClassMain {
 		employee1.setSalary(21_000);
 		employee1.setSickDays(8);
 //		System.out.println("Employee number: " + Ex1EmployeeClass.employeeNumCounter);
-		System.out.println("Employee number: " + employee1.employeeNumber);
+		System.out.println(" Employee number: " + employee1.employeeNumber);
 		
-		System.out.println("Employee name: "+	employee1.getName());
-		System.out.println("Employee age: "+	employee1.getAge());
-		System.out.println("Employee salary: "	+employee1.getSalary());
-		System.out.println("Employee sick days: "+employee1.getSickDays());
+		System.out.println(" Employee name: "+	employee1.getName());
+		System.out.println(" Employee age: "+	employee1.getAge());
+		System.out.println(" Employee salary: "	+employee1.getSalary());
+		System.out.println(" Employee sick days: "+employee1.getSickDays());
 		employee1.increaseSalary(1.04);
 		System.out.println(" New salary: " +employee1.getSalary());
 		
@@ -53,9 +61,11 @@ public class Ex1EmployeeClassMain {
 		
 		System.out.println("\n---------------------------------");
 		System.out.println(" Number of Employee created: | " +Ex1EmployeeClass.employeeCounter);
-		System.out.println("---------------------------------");*/
+		System.out.println("---------------------------------");
 	
-		
+		}catch(InvalidAgeException e){
+			e.printStackTrace();
+		}
 
 	}
 
