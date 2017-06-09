@@ -17,7 +17,7 @@ public class Ex3WeekdayMain {
 				
 				System.out.print("Enter a week day: ");
 				String week = scanner.nextLine();
-				Ex3Weekday2 wk = new Ex3Weekday2(week);
+				Ex3Weekday4 wk = new Ex3Weekday4(week);
 				System.out.println(wk);
 				
 				
@@ -25,7 +25,7 @@ public class Ex3WeekdayMain {
 			
 			
 			}catch(InvalidWeekdayException e){
-				System.out.println(" Invalid week day");
+				System.out.println("Invalid week day");
 				e.printStackTrace();
 				
 			}finally{

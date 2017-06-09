@@ -67,7 +67,7 @@ public class Ex3Weekday2 {
 	 */
 	@Override
 	public String toString() {
-		return "\nWeekday: " + weekday.toString().toUpperCase() ;
+		return "\nWeekday: " + weekday ;
 	};
 
 

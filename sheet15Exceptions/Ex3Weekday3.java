@@ -1,6 +1,7 @@
 package sheet15Exceptions;
 
 public class Ex3Weekday3 {
+	
 
 	private static final String MONDAY = "Monday";
 	private static final String TUESDAY = "Tuesday";
