@@ -75,7 +75,7 @@ public class Ex2ClockClass {
 	public void incrementHours(int incHours){
 
 		hours += incHours;
-		if(hours>=24)
+		if(hours>=23)
 			hours= hours % 24;
 
 		//incrementHours(1);
@@ -96,17 +96,20 @@ public class Ex2ClockClass {
 
 	}
 
-	public void incrementSeconds(int incSeconds){
+	public void incrementSeconds(int incSeconds)throws IncrementProblemException{
 
 
 		seconds += incSeconds;
+		if(incSeconds<0 || incSeconds>120)
+			throw new IncrementProblemException("cannot add on "+ incSeconds + " seconds");
+		
 		if(seconds >59){
 			incrementMinutes(seconds /60);
 			seconds = seconds % 60;
 		}
 	}
 
-	public void resetTime(int hours, int minutes, int seconds){
+	public void resetTime(int hours, int minutes, int seconds) throws IncrementProblemException{
 		
 		reset();
 		incrementHours(hours);

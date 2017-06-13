@@ -24,21 +24,24 @@ public class Ex5SearchForALetter {
 
 
 		System.out.print("Search for a charater :");
+		String searchChar =scanner.nextLine();
 		
+		char letter = searchChar.charAt(0);
+		
+		char [] letters = searchChar.toCharArray();
+		
+		boolean isFound = false;
 
-		for(int i =0; i<str.length(); i++){
-			String searchChar =scanner.nextLine();
-			
-			char [] letters = searchChar.toCharArray();
-			
-			//if(str.contains(searchChar)){
-				if(str.contains(searchChar)){
-				int position = str.indexOf(searchChar);
-			
+		for(int i =0; i<letters.length; i++){
+
+			int position = str.indexOf(searchChar);
+			if(letters[i] == letter){
+
 				System.out.println("[ "+searchChar +" ] was found at position : " +( i+ (position +1)));
+				isFound = true;
 
-
-			}else{
+			}
+			else{
 				System.out.println("[ "+searchChar +" ] was not found");
 			}
 
