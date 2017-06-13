@@ -6,11 +6,11 @@ public class Ex3Weekday2 {
 	private static final String WEDNESDAY = "Wednesday";
 	private static final String THURSDAY = "Thursday";
 	private static final String FRIDAY = "Friday";
-	private static final String SATURDAY = "Saturday";
-	private static final String SUNDAY = "Sunday";
+	//private static final String SATURDAY = "Saturday";
+	//private static final String SUNDAY = "Sunday";
 	private String weekday;
 
-/*	enum Weekdays{
+	/*	enum Weekdays{
 		MONDAY,
 		TUESDAY,
 		WEDNESDAY,
@@ -42,23 +42,33 @@ public class Ex3Weekday2 {
 	 */
 	public void setWeekday(String weekday) throws InvalidWeekdayException {
 
-		switch(weekday){
+		//		if (weekday.equalsIgnoreCase("Monday") || 
+		//		weekday.equalsIgnoreCase("Tuesday") ||
+		//		weekday.equalsIgnoreCase(WEDNESDAY) || 
+		//		weekday.equalsIgnoreCase(THURSDAY) ||
+		//		weekday.equalsIgnoreCase(FRIDAY) ) {
+		//	this.weekday = weekday;
+		//} else {
+		//	throw new InvalidWeekdayException(weekday + 
+		//			" is not a valid weekday"); 
+		//}
+
+		switch(weekday.toLowerCase()){
 
 		case MONDAY: 
 		case TUESDAY:
 		case WEDNESDAY:
 		case THURSDAY:
 		case FRIDAY:
-		case SATURDAY:
-		case SUNDAY:
+		//case SATURDAY:
+		//case SUNDAY:
 
-		this.weekday = weekday;
-		break;
-		//System.out.println(weekday);
+			this.weekday = weekday;
+			break;
+			//System.out.println(weekday);
 
 		default:
-			throw new InvalidWeekdayException(weekday+" is invalid week day");
-			//System.out.println("invalid week day");
+			throw new InvalidWeekdayException(weekday+" is not a valid weekday");
 		}
 	}
 
@@ -67,7 +77,15 @@ public class Ex3Weekday2 {
 	 */
 	@Override
 	public String toString() {
-		return "\nWeekday: " + weekday ;
+		
+		weekday = weekday.toLowerCase();
+		//gets first letter character
+		char firstLetter = weekday.charAt(0);
+		//converts first letter to upper case
+		char uppercase = Character.toUpperCase(firstLetter);
+		
+		weekday = uppercase+weekday.substring(1);
+		return "\nWeekday: ".concat(weekday) ;
 	};
 
 
