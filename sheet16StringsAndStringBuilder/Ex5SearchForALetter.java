@@ -28,23 +28,28 @@ public class Ex5SearchForALetter {
 		
 		char letter = searchChar.charAt(0);
 		
-		char [] letters = searchChar.toCharArray();
+		char [] letters = str.toCharArray();
 		
 		boolean isFound = false;
 
 		for(int i =0; i<letters.length; i++){
+			
+		
 
-			int position = str.indexOf(searchChar);
 			if(letters[i] == letter){
 
-				System.out.println("[ "+searchChar +" ] was found at position : " +( i+ (position +1)));
+				//int position = str.indexOf(searchChar);
+				System.out.println("[ "+searchChar +" ] was found at position : " + (i+1));
 				isFound = true;
 
 			}
-			else{
-				System.out.println("[ "+searchChar +" ] was not found");
-			}
+			/*else{
+			}*/
 
+		}
+		if(!isFound){
+			System.out.println("[ "+searchChar +" ] was not found");
+			
 		}
 
 		scanner.close();
