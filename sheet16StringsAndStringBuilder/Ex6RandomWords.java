@@ -6,15 +6,16 @@ public class Ex6RandomWords {
 
 	public static void main(String[] args) {
 		
-		String[] randWords= {"Java","JavaScript","WebDeveloper","SoftWare Developer"};
+		String[] randWords= {"Java","JavaScript","WebDeveloper","SoftWare Developer","Dublin"};
 		
 		int randomdNum = (int)(Math.random()*5);
 		String word =randWords[randomdNum];
+		System.out.println("A "+word.length()+" letter word has been chosen at random.");
 		searchforLetter(word);
 
 	}
 	
-	public static void searchforLetter(String str){
+	public static void searchforLetter(String word){
 		Scanner scanner =new Scanner(System.in);
 		
 		boolean isRunnig = false;
@@ -25,7 +26,7 @@ public class Ex6RandomWords {
 		
 		char letter = searchChar.charAt(0);
 		
-		char [] letters = str.toCharArray();
+		char [] letters = word.toCharArray();
 		
 		boolean isFound = false;
 
