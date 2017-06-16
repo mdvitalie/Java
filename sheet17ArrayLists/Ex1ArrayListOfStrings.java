@@ -118,6 +118,7 @@ public class Ex1ArrayListOfStrings {
 
 				}
 			}
+			
 			if(!isFound){
 				System.out.println("Sorry not such name on the list");
 				isFound=false;
@@ -174,9 +175,9 @@ public class Ex1ArrayListOfStrings {
 			System.out.println("\n"+ nameList);
 			System.out.println(nameList.isEmpty() ? "The list is empty" : "The list is not empty");
 
+			System.out.println("------------------------------------");
 			nameList.clear();
 			System.out.println("Empty list "+nameList);
-			System.out.println("------------------------------------");
 			System.out.println(nameList.isEmpty() ? "The list is empty" : "The list is not empty");
 		}
 
