@@ -53,7 +53,8 @@ public class Ex2Trainees {
 	public boolean equals(Object obj){
 		Ex2Trainees trainees = (Ex2Trainees)obj;
 		
-		if(this.name.equals(trainees.name)  && this.address.equals(trainees.address) && this.birthday.equals(trainees.birthday)){
+		if(this.name.equals(trainees.name)  && this.address.equals(trainees.address) &&
+				this.birthday.equals(trainees.birthday)){
 			
 			return true;
 		}else{
@@ -65,8 +66,8 @@ public class Ex2Trainees {
 	@Override
 	public String toString() {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		return "ID: " +id+
-				"\nTrainees name: " + name + 
+		return "\n ID: " +id+
+				"\n Trainees name: " + name + 
 				"\n Address: " + address +
 				"\n Birthday: " + birthday.format(formatter);
 				
