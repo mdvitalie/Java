@@ -70,9 +70,9 @@ public class Ex2TraineesMain {
 					System.out.println("The persons birthday is: "+traineeList.get(i).getBirthday().format(formatter));
 					isFound=true;
 					
-					traineeList.remove(traineeList.get(i));
-					System.out.println("The ["+ userInput +"] was removed from the list\n");
-					System.out.println("Corent list: "+ traineeList);
+					//traineeList.remove(traineeList.get(i));
+					//System.out.println("The ["+ userInput +"] was removed from the list\n");
+					System.out.println("\nCorent list: "+ traineeList);
 				}
 				
 				
@@ -81,6 +81,35 @@ public class Ex2TraineesMain {
 			if(!isFound){
 				System.out.println("Sorry not such name on the list");
 				isFound=false;
+
+
+			}
+			
+			//remove a name
+			System.out.print("\nType a name: ");
+			String userInput1 = scanner.nextLine();
+			System.out.println("The name you typed is: " + userInput);
+
+			boolean isFound1 =false;
+			for (int i = 0; i < traineeList.size(); i++) {
+				
+				
+				if(traineeList.get(i).getName().equals(userInput)){
+					/*DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+					System.out.println("The persons birthday is: "+traineeList.get(i).getBirthday().format(formatter));
+					isFound1=true;*/
+					
+					traineeList.remove(traineeList.get(i));
+					System.out.println("The ["+ userInput +"] was removed from the list\n");
+					System.out.println("\nCorent list: "+ traineeList);
+				}
+				
+				
+
+			}
+			if(!isFound1){
+				System.out.println("Sorry not such name on the list");
+				isFound1=false;
 
 
 			}
